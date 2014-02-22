@@ -27,7 +27,7 @@ nav{
 	}
 nav .navigate{
 	color: #ccc;
-	font-size: 15px;
+	font-size: 17px;
 	font-family: 'Gafata', sans-serif;
 	margin-right: 20px;
 	}
@@ -45,3 +45,30 @@ nav .navigate{
 	width: 100%;
 	display: inline-block;
 }
+.paragraph{
+	font-family: 'Gafata', sans-serif;
+	font-size: 20px;
+	color: #456;
+	text-align: center;
+	
+}	
+.firstchart{
+		border: 1px solid #ccc;
+}
+
+form{
+	padding: 10px;
+	margin: 0 auto;
+	display: block;
+}
+label{
+	text-align: center;
+	font-family: 'Exo 2', sans-serif;
+	color: #344;
+}
+.form{
+	text-align: center;
+	width: 200px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	}

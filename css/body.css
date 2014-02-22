@@ -50,11 +50,10 @@ nav .navigate{
 	font-size: 20px;
 	color: #456;
 	text-align: center;
-	display: none;
+	
 }	
 .firstchart{
-	display: none;
-	border: 1px solid #ccc;
+		border: 1px solid #ccc;
 }
 
 form{
