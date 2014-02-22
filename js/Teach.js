@@ -1,6 +1,7 @@
 var chart;
 
-            var chartData;         
+            var chartData;
+		         
 		$.getJSON("js/teach.json",function(data){
 		chartData=data;		
 		});
@@ -12,7 +13,7 @@ var chart;
                 // SERIAL CHART
                 chart = new AmCharts.AmSerialChart();
                 chart.dataProvider = chartData;
-                chart.categoryField = "year";
+                chart.categoryField = "district";
                 chart.startDuration = 1;
 
                 // AXES
@@ -37,7 +38,7 @@ var chart;
                 // CURSOR
                 var chartCursor = new AmCharts.ChartCursor();
                 chartCursor.cursorAlpha = 0;
-                chartCursor.zoomable = false;
+                chartCursor.zoomable = true;
                 chartCursor.categoryBalloonEnabled = false;
                 chart.addChartCursor(chartCursor);
 
@@ -45,3 +46,6 @@ var chart;
 
                 chart.write("chartdiv");
             });
+$("#div1").click(function(){
+	});
+$("document").ready(function(){});
