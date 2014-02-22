@@ -45,3 +45,12 @@ nav .navigate{
 	width: 100%;
 	display: inline-block;
 }
+.paragraph{
+	font-family: 'Gafata', sans-serif;
+	font-size: 20px;
+	color: #456;
+	text-align: center;
+}	
+.firstchart{
+	border: 1px solid #ccc;
+}
