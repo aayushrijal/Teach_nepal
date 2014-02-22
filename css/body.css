@@ -50,7 +50,26 @@ nav .navigate{
 	font-size: 20px;
 	color: #456;
 	text-align: center;
+	display: none;
 }	
 .firstchart{
+	display: none;
 	border: 1px solid #ccc;
 }
+
+form{
+	padding: 10px;
+	margin: 0 auto;
+	display: block;
+}
+label{
+	text-align: center;
+	font-family: 'Exo 2', sans-serif;
+	color: #344;
+}
+.form{
+	text-align: center;
+	width: 200px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	}
