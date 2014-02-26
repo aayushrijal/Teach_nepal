@@ -26,7 +26,7 @@ nav{
 	display: inline-block;
 	}
 nav .navigate{
-	color: #ccc;
+	color: #3bb;
 	font-size: 17px;
 	font-family: 'Gafata', sans-serif;
 	margin-right: 20px;
@@ -49,14 +49,53 @@ nav .navigate{
 	font-family: 'Gafata', sans-serif;
 	font-size: 20px;
 	color: #456;
-	text-align: center;
-	
-}	
-.border1{
-		border: 1px solid #ccc;
+	text-align: center;	
 }
-
-form{
+.miningtitle{
+	font-family: 'Gafata', sans-serif;
+	font-size: 20px;
+	background: #377;
+	color: #fff;
+	text-align: center;
+	padding: 5px;
+	margin-top: -5px;
+}
+.border1{
+	width: 350px;
+	display: inline-block;	
+}
+.border2{
+	border: 1px solid #ccc;
+}
+.mining{
+	margin-bottom: 20px;
+	font-family: 'Gafata', sans-serif;
+	font-size: 20px;
+	color: #fff;
+	text-align: center;
+	}
+.devreg{
+	background: #3bb;
+	width: 190px;
+	padding: 10px;
+	display: inline-block;
+	vertical-align: middle;
+	cursor: pointer;
+	cursor: hand;
+}
+.district, .year, .teachers, .students, .charts{
+	background: #3bb;
+	width: 120px;
+	padding: 10px;
+	display: inline-block;
+	vertical-align: middle;
+	cursor: pointer;
+	cursor: hand;
+}
+.devreg:hover, .district:hover, .year:hover, .teachers:hover, .students:hover, .charts:hover{
+	background: #a00;
+}
+/*form{
 	padding: 10px;
 	margin: 0 auto;
 	display: block;
@@ -65,10 +104,12 @@ label{
 	text-align: center;
 	font-family: 'Exo 2', sans-serif;
 	color: #344;
+	font-size: 18px;
 }
 .form{
 	text-align: center;
 	width: 200px;
 	border: 1px solid #ccc;
 	border-radius: 3px;
-	}
+	font-size: 16px;
+	}*/
