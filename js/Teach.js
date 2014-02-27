@@ -1,12 +1,19 @@
 var chart;
 		var graph;
 		var chartCursor;
-            var chartData;
-		var chartData1;
+            var chartData=[];
+		var chartData2=[];
 		         
-		$.getJSON("js/data2011.json",function(data){
-		chartData=data;		
+		$.getJSON("js/teach.json",function(data){
+			chartData2=data;
+			$.each(data,function(key,val){
+		if(val.year==2011){
+		chartData.push(val);
+		}		
 		});
+				
+		});
+		
 		/*for(var i=0;i<chartData.length;i++)
 		if(chartData[i].year==2008){
 			chartData1.push(chartData[i]);
@@ -18,7 +25,7 @@ var chart;
                 // SERIAL CHART
                 chart = new AmCharts.AmSerialChart();
                 chart.dataProvider = chartData;
-                chart.categoryField = "District";
+                chart.categoryField = "district";
                 chart.startDuration = 1;
 
                 // AXES
@@ -33,11 +40,12 @@ var chart;
 
                 // GRAPH
                 graph = new AmCharts.AmGraph();
-                graph.valueField = "Total";
+                graph.valueField = "total";
                 graph.balloonText = "[[category]]: <b>[[value]]</b>";
                 graph.type = "column";
                 graph.lineAlpha = 0;
                 graph.fillAlphas = 0.9;
+		
                 chart.addGraph(graph);
 		
                 // CURSOR
@@ -52,16 +60,25 @@ var chart;
                 chart.write("chartdiv");
             });
 $("#div1").click(function(){
-	$.getJSON("js/data2010.json",function(data){
-		chartData=data;		
+	$.getJSON("js/teach.json",function(data){
+		chartData.length=0;
+		$.each(data,function(key,val){
+		if(val.year==2008){
+		chartData.push(val);
+		}
 		});
+		});
+	/*chart = new AmCharts.AmSerialChart();
+                chart.dataProvider = chartData;
+                chart.categoryField = "district";
+                chart.startDuration = 1;	
 	graph = new AmCharts.AmGraph();
-                graph.valueField = "Total";
+                graph.valueField = "total";
                 graph.balloonText = "[[category]]: <b>[[value]]</b>";
                 graph.type = "column";
                 graph.lineAlpha = 0;
                 graph.fillAlphas = 0.9;
-                chart.addGraph(graph);
+		chart.addGraph(graph);
 		
                 // CURSOR
                 chartCursor = new AmCharts.ChartCursor();
@@ -71,8 +88,11 @@ $("#div1").click(function(){
                 chart.addChartCursor(chartCursor);
 
                 chart.creditsPosition = "top-right";
-
-                chart.write("chartdiv");
 		
+chart.write("chartdiv");*/
+		chart.dataProvider = chartData;
+		chart.validateData();
+		chart.validateNow();
+                
 	});
 $("document").ready(function(){});
